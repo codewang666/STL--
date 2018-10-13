@@ -1,3 +1,5 @@
+
+//å•é“¾è¡¨
 #include "stdafx.h"
 #include <iostream>
 #include "assert.h"
@@ -54,12 +56,12 @@ ChainNode::ChainNode(const ChainNode& NewNode )
 		throw "execption";
 
 	chainNum=NewNode.chainNum;
-	//¸´ÖÆÍ·½áµã
+	//å¤åˆ¶å¤´ç»“ç‚¹
     Node* sourceNode=NewNode.pfirstNode;
 	pfirstNode=new Node;
 	pfirstNode->data=sourceNode->data;
 
-   //Òª¸´ÖÆµÄ½áµãºóÒÆ
+   //è¦å¤åˆ¶çš„ç»“ç‚¹åç§»
 	sourceNode=sourceNode->next;
 	Node* TargetNode=pfirstNode;
 
@@ -154,7 +156,7 @@ bool ChainNode::EraseNode(int index)
 
 bool ChainNode::insertNode(int index,const int& theElement)
 {
-	//¼ì²éË÷Òı
+	//æ£€æŸ¥ç´¢å¼•
 	 if(index<0||index>chainNum)
 		 return false;
 
